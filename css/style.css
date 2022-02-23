@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Permanent+Marker&display=swap');
+
+html,
+body {
+  color: rgb(30, 30, 59);
+  display: flex;
+  flex-direction: column;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 16px;
+  height: 100%;
+}
+header {
+  height: 250px;
+  position: relative;
+}
+.bg-image {
+  background-image: url('../assets/img/board.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.bg-filtre {
+  background-color: rgba(0, 0, 0, 0.199);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.bg-text {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+}
+h1 {
+  background-color: rgba(255, 255, 255, 0.178);
+  border: 2px solid white;
+  color: white;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+section {
+  text-align: center;
+  padding: 1rem;
+}
+h2 {
+  color: rgb(30, 30, 59);
+  font-family: 'Permanent Marker', cursive;
+  font-size: 2rem;
+  margin-bottom: 1.3rem;
+}
+#new-task {
+  display: flex;
+}
+#new-task_input {
+  font-family: 'Oxygen', sans-serif;
+  flex-grow: 1;
+  height: 100%;
+  margin-right: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+#submit_button {
+  background-color: rgb(30, 30, 59);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-family: 'Permanent Marker', cursive;
+  transition: background-color 150ms ease-in-out;
+  padding: 0.5rem 1rem;
+}
+#submit_button:hover {
+  background-color: rgba(30, 30, 59, 0.8);
+}
+#incomplete-tasks,
+#completed-tasks {
+  background-color: rgba(30, 30, 59, 0.1);
+  border-radius: 8px;
+  height: 155px;
+  overflow: auto;
+}
+.important-task {
+  color: rgb(129, 15, 15);
+  font-weight: 700;
+}
+.complete-task {
+  color: rgb(177, 177, 177);
+  text-decoration: line-through;
+}
+ul {
+  list-style-type: decimal;
+  text-align: start;
+  padding: 1rem 0rem 1rem 2rem;
+}
+ul li {
+  margin-bottom: 1rem;
+}
+ul span {
+  margin-right: 1rem;
+}
+ul button {
+  background-color: rgb(30, 30, 59);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  margin: 0 0.5rem;
+  padding: 0.2rem 0.5rem;
+  transition: background-color 150ms ease-in-out;
+}
+ul button:hover {
+  background-color: rgb(30, 30, 59, 0.5);
+}
+.hr {
+  background-color: rgba(0, 0, 0, 0.205);
+  border: 0;
+  height: 1px;
+  max-width: 50%;
+  width: 200px;
+}
+
+footer {
+  align-items: center;
+  background-color: rgb(30, 30, 59);
+  color: white;
+  display: flex;
+  justify-content: center;
+  height: 80px;
+}
+@media screen and (min-width: 700px) {
+  main {
+    margin: auto;
+    max-width: 60%;
+    width: 100%;
+  }
+}
