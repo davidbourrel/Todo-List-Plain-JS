@@ -83,10 +83,10 @@ const optionsTask = (e: Event) => {
 
   // Important button
   if (button?.classList[0] === 'importantTaskButton') {
-    const ulId =
+    const listId =
       button?.parentElement?.parentElement?.parentElement?.getAttribute('id');
 
-    ulId && ulId === 'incomplete-tasks'
+    listId && listId === 'incomplete-tasks'
       ? button.parentElement?.parentElement?.classList.toggle('important-task')
       : button.remove();
   }

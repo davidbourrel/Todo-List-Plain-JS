@@ -66,8 +66,8 @@ const optionsTask = (e) => {
     }
     // Important button
     if ((button === null || button === void 0 ? void 0 : button.classList[0]) === 'importantTaskButton') {
-        const ulId = (_e = (_d = (_c = button === null || button === void 0 ? void 0 : button.parentElement) === null || _c === void 0 ? void 0 : _c.parentElement) === null || _d === void 0 ? void 0 : _d.parentElement) === null || _e === void 0 ? void 0 : _e.getAttribute('id');
-        ulId && ulId === 'incomplete-tasks'
+        const listId = (_e = (_d = (_c = button === null || button === void 0 ? void 0 : button.parentElement) === null || _c === void 0 ? void 0 : _c.parentElement) === null || _d === void 0 ? void 0 : _d.parentElement) === null || _e === void 0 ? void 0 : _e.getAttribute('id');
+        listId && listId === 'incomplete-tasks'
             ? (_g = (_f = button.parentElement) === null || _f === void 0 ? void 0 : _f.parentElement) === null || _g === void 0 ? void 0 : _g.classList.toggle('important-task')
             : button.remove();
     }
