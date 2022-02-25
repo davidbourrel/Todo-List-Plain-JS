@@ -17,7 +17,7 @@ header {
   position: relative;
 }
 .bg-image {
-  background-image: url('../assets/img/board.jpg');
+  background-image: url('../img/board.jpg');
   background-position: center;
   background-size: cover;
   height: 100%;
