@@ -90,7 +90,7 @@ h2 {
 #completed-tasks {
   background-color: rgba(30, 30, 59, 0.1);
   border-radius: 8px;
-  height: 155px;
+  height: 160px;
   overflow: auto;
 }
 .important-task {
