@@ -26,6 +26,9 @@ const createNewTask = (taskString: string) => {
   const span = document.createElement('span');
   span.innerText = taskString;
 
+  // DIV WITH BUTTONS
+  const divButtons = document.createElement('div');
+
   // DONE BUTTON
   const doneButton = document.createElement('button');
   doneButton.classList.add('doneButton');
@@ -42,10 +45,12 @@ const createNewTask = (taskString: string) => {
   closeButton.innerText = '❌';
 
   // INSERT VALUE
+  divButtons.appendChild(doneButton);
+  divButtons.appendChild(importantTaskButton);
+  divButtons.appendChild(closeButton);
+
   listItem.appendChild(span);
-  listItem.appendChild(doneButton);
-  listItem.appendChild(importantTaskButton);
-  listItem.appendChild(closeButton);
+  listItem.appendChild(divButtons);
 
   return listItem;
 };
@@ -64,8 +69,8 @@ const optionsTask = (e: Event) => {
 
   // Done button
   if (button?.classList[0] === 'doneButton') {
-    const listItem = button.parentElement;
-    const importantButton = listItem?.children[2];
+    const listItem = button.parentElement?.parentElement;
+    const importantButton = button.parentElement?.children[1];
 
     if (listItem) {
       listItem.classList.remove('important-task');
@@ -78,16 +83,17 @@ const optionsTask = (e: Event) => {
 
   // Important button
   if (button?.classList[0] === 'importantTaskButton') {
-    const ulId = button?.parentElement?.parentElement?.getAttribute('id');
+    const ulId =
+      button?.parentElement?.parentElement?.parentElement?.getAttribute('id');
 
     ulId && ulId === 'incomplete-tasks'
-      ? button.parentElement?.classList.toggle('important-task')
+      ? button.parentElement?.parentElement?.classList.toggle('important-task')
       : button.remove();
   }
 
   // Close button
   if (button?.classList[0] === 'closeButton') {
-    button.parentElement?.remove();
+    button.parentElement?.parentElement?.remove();
   }
 };
 
