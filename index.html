@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo list</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="dist/app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="bg-image"></div>
+      <div class="bg-filtre"></div>
+      <div class="bg-text">
+        <h1>Todo list</h1>
+      </div>
+    </header>
+    <main>
+      <section>
+        <h2>Add New Task</h2>
+        <form id="new-task">
+          <input
+            id="new-task_input"
+            type="text"
+            autocomplete="off"
+            autofocus
+            placeholder="My new task"
+            minlength="1"
+            maxlength="35"
+          />
+          <button type="submit" id="submit_button">Add task</button>
+        </form>
+      </section>
+      <section>
+        <h2>Current Tasks</h2>
+        <ul id="incomplete-tasks"></ul>
+      </section>
+      <hr class="hr" />
+      <section>
+        <h2>Tasks Done</h2>
+        <ul id="completed-tasks"></ul>
+      </section>
+    </main>
+    <footer>
+      <p>Made by un Tagazou</p>
+    </footer>
+  </body>
+</html>
